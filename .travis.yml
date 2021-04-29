@@ -18,7 +18,7 @@ after_success:
   - docker build -t krishnabs/multi-server ./server
   - docker build -t krishnabs/multi-worker ./worker
   # loginto docker
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password--stdin 
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin 
   # Push docker images to docker hub
   - docker push krishnabs/multi-client
   - docker push krishnabs/multi-nginx
