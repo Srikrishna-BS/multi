@@ -6,7 +6,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t krishnabs/multi -f ./client/Dockerfile.dev . ./client
+  - docker build -t krishnabs/multi -f ./client/Dockerfile.dev ./client
 
 script:
   - docker run -e CI=true  krishnabs/multi npm test 
